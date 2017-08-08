@@ -1,0 +1,397 @@
+<!DOCTYPE HTML>
+<!--
+	Страница предназначена для внутреннего пользования в компании Мегапьютер
+-->
+<html>
+	<head>
+		<title>Ссылки</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="shortcut icon" href="images//16x16//favicon16x16.png" type="image/x-icon">
+		<script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="assets/js/script.js"></script>
+	</head>
+	<body id="top">
+		
+		
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<div id="snitch" onMouseOver="slide()" onMouseOut="slideback()">
+						<img src="images/gif/HP/gif/golden_snitch.gif"/>
+					</div>
+					<script>
+						var slidepos = 4;
+						var slidediv = document.getElementById('snitch');
+						var sliding = false;
+
+						function slide() {
+							// Изначально убираем интервал (на всякий случай)
+							sliding = clearInterval(sliding);
+							
+							// Ставим интервал (тут 40 ms - скорость движения, меньше=быстрее)
+							sliding = setInterval(function() {
+								//if( slidepos < 600 ) {// Двигаемся до 600 пикселей
+									slidepos++;
+									slidediv.style.left = slidepos; // Тут лучше без px - глючит в konqueror
+								//}
+								//else {
+									// Убираем интервал, когда он не нужен
+								//	sliding = clearInterval(sliding);
+								//}
+							}, 4 );
+						}
+
+						function slideback() {
+							sliding = clearInterval(sliding);
+							
+							sliding = setInterval(function() {
+								if(slidepos > 4) { // до начальной позиции
+									slidepos--;
+									slidediv.style.left = slidepos;
+									slidediv.style.top = slidepos;
+								} else {
+									sliding = clearInterval(sliding);
+								}
+							}, 20 );
+						}
+					</script>
+					<h1>Мегапьютер</h1>
+					<p>Вспомогательная страница отдела тестирования компании Мегапьютер.</p>
+					<p id="back-top">
+						<a href="#top"><span> Table of content </span></a>
+					</p>
+					<p id="back-hadoop">
+						<a href="#top"><span> Hadoop cluster </span></a>
+					</p>
+					<p id="little-moth">
+						<img src="images/gif/little-moth.gif" alt="" />
+					</p>
+				</header>
+				<footer>
+					<a href="#banner" class="button style2 scrolly-middle">Далее</a>
+				</footer>
+			</section>
+
+		<!-- Banner -->
+			<section id="banner">
+				<header>
+					<h2><a href="http://localhost:5080/polyanalyst/help/rus/toc.html"target="_blank">Table of Contents</a></h2>
+				</header>
+				<p>Список сотрудников <a href="https://mis.megaputer.ru/employees"target="_blank">Megaputer Intelligent Staff (MIS)</a>.<br />
+				</p>
+				<p>Баги <a href="https://bugtrack.megaputer.ru/query.cgi?format=advanced"target="_blank">Search for bugs</a> Enter Bug: <a href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PA6"target="_blank">PA6</a>; <a href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PAHD"target="_blank">PAHD</a> Metrics: <a href="https://metrics.megaputer.ru/"target="_blank">PA6</a>.<br />
+				</p>
+				<p>Автотесты <a href="https://qa.megaputer.ru/reports"target="_blank">Reports</a>; <a href="https://qa.megaputer.ru/test_units"target="_blank">Add</a>; <a href="https://qa.megaputer.ru/test_cases"target="_blank">Cases</a>.<br />
+				</p>
+				<p>Коммиты <a href="https://builds.megaputer.ru/check"target="_blank">Check commit</a>.<br />
+				</p>
+				<p>Почта <a href="https://mail.megaputer.ru/?_task=mail&_mbox=INBOX"target="_blank">Roundcube</a>.<br />
+				</p>
+				<p>Верификация <a href="http://10.0.0.90:3000/"target="_blank">Verification</a> <a href="http://verification.megaputer.net/"target="_blank">V2</a>.<br />
+				</p>
+				<p>Интернет <a href="http://10.0.0.1:4080/login/loginpage?internal=0&NTLM=0"target="_blank">KerioControl</a>; Митинги <a href="http://10.0.0.1:4080/login/loginpage?internal=0&NTLM=0"target="_blank">FTP</a>.<br />
+				</p>
+				<p>Вики <a href="https://wiki.megaputer.ru/index.php?title=MegaTest._Quick_Start"target="_blank">Quick Start</a>; <a href="https://wiki.megaputer.ru/index.php?title=%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BD%D0%BE%D0%B2%D1%8B%D1%85_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2_%D0%B2_%D0%B1%D0%B0%D0%B7%D1%83_%D0%B0%D0%B2%D1%82%D0%BE%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2_(%D0%BF%D0%BE%D0%BA%D0%B0_%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE_%D0%B4%D0%BB%D1%8F_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%D0%BE%D0%B2)"target="_blank">Add</a>; <a href="https://wiki.megaputer.ru/index.php?title=Release_notes#Nodes"target="_blank">Release notes</a>; <a href="https://wiki.megaputer.ru/index.php?title=Relation_extraction_TestPlan"target="_blank">TestPlan</a>.<br />
+				</p>
+				<p>Гугл диск <a href="https://docs.google.com/spreadsheets/d/1a0doKoV8DeMSjdoMz-rwhAiGumrRBvJGSuYuayryyOg/edit#gid=1787016346"target="_blank">Football</a>; <a href="https://docs.google.com/spreadsheets/d/1Qy7TFAWugV3M0TGSbM0Y6h8KlFklebQpBIBinE2ayRw/edit?ts=58776258#gid=0"target="_blank">Plans</a>; <a href="https://docs.google.com/spreadsheets/d/1Q3VLr4G1Z7GrFrVy408u1KUiI2qdkwBS2mk-lo9b_60/edit?ts=57c82631#gid=2126682439"target="_blank">Holiday</a>; <a href="https://docs.google.com/spreadsheets/d/1qEb8pNIRm9SUNQgBNbefFTfjjvjBrcrMaFAUW9yR17Y/edit#gid=0"target="_blank">HAD instances</a>.<br />
+				</p>
+				<p>Гугл диск <a href="https://docs.google.com/spreadsheets/d/13oyD77Ke-V6RoTKj6tCcQOVe2VH_QDQ9Zia06NATmEo/edit#gid=0"target="_blank">Untested nodes</a>; <a href="https://docs.google.com/spreadsheets/d/1MV26De6llbz-9zECHj5ZM2RBAsZsnTTb0AoUGKQjFuk/edit#gid=0"target="_blank">My projects</a>; <a href="https://docs.google.com/spreadsheets/d/1tdXIKBHEC0EuVCtdSbiNcaefcRF703SUfzlnk7UGdEo/edit#gid=0"target="_blank">Comp configs</a>.<br />
+				</p>
+				<p>Гугл диск <a href="https://docs.google.com/spreadsheets/d/11iwMO8nLApIG5tiwkPHPZXHuJNAelSGxKabN-fIoc0s/edit#gid=0"target="_blank">PA7 URGENT NODES</a>; <a href="https://docs.google.com/document/d/1PQHPeA2FRNEqTD-ERfIwq2nbLXsSjMu_oDxgamfrSOQ/edit#heading=h.t15qh256mta7"target="_blank">Reimplement Stryker</a>.<br />
+				</p>
+				<p>Чат компании <a href="https://megaputer.slack.com/messages/general/details/"target="_blank">Slack</a>.<br />
+				</p>
+				<p>Креш отчеты <a href="https://builds.megaputer.ru/"target="_blank">Untriaged</a>.<br />
+				</p>
+				</p>
+				<p>Узлы <a href="https://bugtrack.megaputer.ru/describecomponents.cgi?product=PA6"target="_blank">abbreviation(PA6)</a>; <a href="https://bugtrack.megaputer.ru/describecomponents.cgi?product=PAHD"target="_blank">abbreviation(PAHD)</a>.<br />
+				</p>
+				<p id="hadoop_p"> <span>Кластер</span> <a href="https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html"target="_blank">Hadoop</a>; <a href="http://docs.oracle.com/javase/7/docs/api/java/util/regex/Pattern.html"target="_blank">Pattern</a>; <a href="http://192.168.1.71:8088/cluster"target="_blank">Cluster Metrics</a>.<br />
+				</p>
+				<p>Фабрикатор <a href="https://phabricator.megaputer.ru/project/view/4/"target="_blank">PA6 Web Reports</a>; <a href="https://phabricator.megaputer.ru/project/view/20/"target="_blank">web client</a>; <a href="https://phabricator.megaputer.ru/project/view/22/"target="_blank">DSView</a>; <a href="https://phabricator.megaputer.ru/project/view/32/"target="_blank">Text Mining</a>.<br />
+				</p>
+				<p>Фабрикатор <a href="https://phabricator.megaputer.ru/project/view/15/"target="_blank">PA7 Web UI</a>; <a href="https://phabricator.megaputer.ru/project/view/31/"target="_blank">PA7</a>; <a href="https://phabricator.megaputer.ru/project/view/16/"target="_blank">Hadoop</a>; <a href="https://phabricator.megaputer.ru/project/view/37/"target="_blank">Testing</a>; <a href="https://phabricator.megaputer.ru/project/view/23/"target="_blank">GIS</a>.<br />
+				</p>
+				<p>Ревизии <a href="https://jenkins.megaputer.ru/job/pa6distr_tests/"target="_blank">Workboard</a>.<br />
+				</p>
+				<p>Переводы хелпа <a href="http://help-status.megaputer.ru/mismatching/rus.html"target="_blank">Workboard</a>.<br />
+				</p>
+				<p>Креденшелы <a href="https://apps.twitter.com/app/13010716/keys"target="_blank">Twitter</a>; <a href="https://console.developers.google.com/apis/credentials?project=polyanalyst65"target="_blank">Google+</a>; <a href="https://developers.facebook.com/quickstarts/1355174264533095/?platform=web"target="_blank">Facebook</a>; <a href="https://languagecloud.sdl.com/translation-toolkit/summary"target="_blank">SDL</a>.<br />
+				</p>
+				<p>ПА7 <a href="http://localhost:9980/v0.7/static/www/paclient/pa7app.html"target="_blank">PA7</a>; <a href="http://localhost:9980/v0.7/static/www/paclient/pa7app.html?debug"target="_blank">Debug</a>.<br />
+				</p>
+				<p>ПА6 <a href="https://localhost:5043/polyanalyst/static/paclient/pa6client.html?locale=eng"target="_blank">Pallet</a>.<br />
+				</p>
+				<!--<div class="fixed_button">button</div>1 -->
+				<footer>
+					<a href="#first" class="button style2 scrolly">Далее</a>
+				</footer>
+			</section>
+
+		<!-- Feature 1 -->
+			<article id="first" class="container box style1 right">
+				<a href="#" class="image fit"><img src="images/fulls/1.gif" alt="" /></a>
+				<div class="inner">
+					<!--<header>
+						<h2>Translate Node<br />
+						passwords</h2>
+					</header>-->
+					
+					<p>WebHose - <b></p>
+					<p>e09d13c0-16ba-462b-968f-6c7e01f098b0</b></p>
+					<p>MS cliend id - <b>polyanalyst</b> ; secret <b>6qqy4MJO0skQ4656vQZWpBfe37KQQ</b> <b>PdmQk3crUT3h85YfKJl6ZQ%3D%3D</b> - SDL</p>
+					
+				</div>
+			</article>
+
+		<!-- Feature 2 -->
+			<article class="container box style1 left">
+				<a href="#" class="image fit"><img src="images/gif/chatnoir-plugg-marinette-ladybug-Favim.com-4301534.gif" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Server settings</h2>
+					</header>
+					<p id="bug-animal">
+						<img src="images/gif/Tined.gif" alt="" />
+					</p>
+					<p><b>\\host\dlc</b> - DLC update<br />
+					<b>\\host\paupdate\main</b> - PA update<br />
+					<b>http://192.168.1.71:15508</b> - res api hadoop.</p>
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article class="container box style2">
+				<header>
+					<h2>Корпоратив</h2>
+					<p>Собраны фотки<br />
+					во время отдыха.</p>
+				</header>
+				<div class="inner gallery">
+					<div class="row 0%">
+						<div class="3u 12u(mobile)"><a href="images/fulls/ssh.png" class="image fit"><img src="images/thumbs/01.jpg" alt="" title="Ad infinitum" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/mail.png" class="image fit"><img src="images/thumbs/02.jpg" alt="" title="Dressed in Clarity" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/sp.png" class="image fit"><img src="images/thumbs/03.jpg" alt="" title="Raven" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/12.jpg" class="image fit"><img src="images/thumbs/04.jpg" alt="" title="I'll have a cup of Disneyland, please" /></a></div>
+					</div>
+					<div class="row 0%">
+						<div class="3u 12u(mobile)"><a href="images/fulls/13.jpg" class="image fit"><img src="images/thumbs/05.jpg" alt="" title="Cherish" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/14.jpg" class="image fit"><img src="images/thumbs/06.jpg" alt="" title="Different." /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/15.jpg" class="image fit"><img src="images/thumbs/07.jpg" alt="" title="History was made here" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/16.jpg" class="image fit"><img src="images/thumbs/08.jpg" alt="" title="People come and go and walk away" /></a></div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Contact -->
+		<!--
+			<article class="container box style3">
+				<header>
+					<h2>Обратная связь</h2>
+					<p>Пока не работает.</p>
+				</header>
+				<form method="post" action="#">
+					<div class="row 50%">
+						<div class="6u 12u$(mobile)"><input type="text" class="text" name="name" placeholder="Name" /></div>
+						<div class="6u$ 12u$(mobile)"><input type="text" class="text" name="email" placeholder="Email" /></div>
+						<div class="12u$">
+							<textarea name="message" placeholder="Message"></textarea>
+						</div>
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</article>
+			-->
+
+		<!-- Generic -->
+		<!--
+			<article class="container box style3">
+				<header>
+					<h2>Generic Box</h2>
+					<p>Just a generic box. Nothing to see here.</p>
+				</header>
+				<section>
+					<header>
+						<h3>Paragraph</h3>
+						<p>This is a subtitle</p>
+					</header>
+					<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
+					habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
+					leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
+					amet risus elit.</p>
+				</section>
+				<section>
+					<header>
+						<h3>Blockquote</h3>
+					</header>
+					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+					tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
+				</section>
+				<section>
+					<header>
+						<h3>Divider</h3>
+					</header>
+					<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
+					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+					posuere cubilia.</p>
+					<hr />
+					<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
+					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+					posuere cubilia.</p>
+				</section>
+				<section>
+					<header>
+						<h3>Unordered List</h3>
+					</header>
+					<ul class="default">
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					</ul>
+				</section>
+				<section>
+					<header>
+						<h3>Ordered List</h3>
+					</header>
+					<ol class="default">
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+					</ol>
+				</section>
+				<section>
+					<header>
+						<h3>Table</h3>
+					</header>
+					<div class="table-wrapper">
+						<table class="default">
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>Name</th>
+									<th>Description</th>
+									<th>Price</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>45815</td>
+									<td>Something</td>
+									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>24524</td>
+									<td>Nothing</td>
+									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+									<td>19.99</td>
+								</tr>
+								<tr>
+									<td>45815</td>
+									<td>Something</td>
+									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+									<td>29.99</td>
+								</tr>
+								<tr>
+									<td>24524</td>
+									<td>Nothing</td>
+									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
+									<td>19.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3"></td>
+									<td>100.00</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</section>
+				<section>
+					<header>
+						<h3>Form</h3>
+					</header>
+					<form method="post" action="#">
+						<div class="row">
+							<div class="6u">
+								<input class="text" type="text" name="name" id="name" value="" placeholder="John Doe" />
+							</div>
+							<div class="6u">
+								<input class="text" type="text" name="email" id="email" value="" placeholder="johndoe@domain.tld" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<select name="department" id="department">
+									<option value="">Choose a department</option>
+									<option value="1">Manufacturing</option>
+									<option value="2">Administration</option>
+									<option value="3">Support</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<input class="text" type="text" name="subject" id="subject" value="" placeholder="Enter your subject" />
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<textarea name="message" id="message" placeholder="Enter your message"></textarea>
+							</div>
+						</div>
+						<div class="row">
+							<div class="12u">
+								<ul class="actions">
+									<li><input type="submit" value="Submit" /></li>
+									<li><input type="reset" class="style3" value="Clear Form" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</section>
+			</article>
+		-->
+
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+				<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Untitled. All rights reserved.</li><li>Table of Contents: <a href="http://localhost:5080/polyanalyst/help/rus/toc.html"target=»_blank»>Оглавление</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
