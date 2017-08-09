@@ -1317,7 +1317,7 @@
 		background-position: top left, center 0;
 		background-attachment: fixed, fixed;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 18pt;
+		font-size: 8pt;
 		line-height: 1.75em;
 		font-weight: 300;
 		letter-spacing: 1px;
@@ -1344,7 +1344,7 @@
 
 	input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 18pt;
+		font-size: 12pt;
 		line-height: 1.75em;
 		font-weight: 300;
 		letter-spacing: 1px;
@@ -1394,7 +1394,7 @@
 	}
 
 		a:hover {
-			border-bottom-color: rgba(53, 184, 143, 0);
+			border-bottom-color: rgba(53, 184, 143, 123);
 		}
 
 	sub {
@@ -2031,7 +2031,7 @@
 		}
 
 		#banner a {
-			color: inherit;
+			color: #EBCFA0;
 			border-bottom-color: rgba(255, 255, 255, 0.5);
 		}
 
@@ -2226,7 +2226,7 @@
 		/* Basic */
 
 			body, input, textarea, select {
-				font-size: 16pt;
+				font-size: 12pt;
 			}
 
 	}
@@ -2257,7 +2257,7 @@
 				background-size: auto, 100% auto;
 				background-position: top left, top center;
 				background-attachment: scroll, scroll;
-				font-size: 14pt;
+				font-size: 12pt;
 			}
 
 			input, textarea, select {
@@ -2537,7 +2537,7 @@
 	#back-top {
 		position: fixed;
 		bottom: 300px;
-		margin-left: -160px;
+		margin-left: -250px;
 	}
 	#back-top a {
 		width: 108px;
@@ -2578,7 +2578,7 @@
 	#back-hadoop {
 		position: fixed;
 		bottom: 160px;
-		margin-left: -160px;
+		margin-left: -250px;
 	}
 	#back-hadoop a {
 		width: 108px;
@@ -2641,3 +2641,54 @@
 		left: 4px;
 		padding: 10px;
     }
+	
+	.projects {
+		position: fixed;
+		/*bottom: 300px;
+		margin-left: -250px;*/
+		left: 0px
+		display:block;
+		text-align: right;
+		float: right;
+		margin-right: 2px;
+		width: 64px;
+		height: 64px;
+		 
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		filter: alpha(Opacity=50);
+		-moz-opacity: 0.5;
+		-khtml-opacity: 0.5;
+		opacity: 0.5;
+	}
+	
+	.projects:hover{
+		filter: alpha(Opacity=50);
+		-khtml-opacity: 0.9;
+		opacity: 0.9;
+	}
+	
+	#reports {
+		top:2px;
+		right:2px;
+		background: url(images/reports.jpg) no-repeat;
+	}
+	
+	#client{
+		top:66px;
+		right:2px;
+		background: url(images/client.png) no-repeat;
+	}
+	
+	#dsview{
+		top:130px;
+		right:2px;
+		background: url(images/dsview.png) no-repeat;
+	}
+	
+	#textmining{
+		top:196px;
+		right:2px;
+		background: url(images/text_mining.png) no-repeat;
+	}
