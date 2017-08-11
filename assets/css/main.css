@@ -2662,9 +2662,16 @@
 	}
 	
 	.projects:hover{
-		filter: alpha(Opacity=50);
+		filter: alpha(Opacity=90);
 		-khtml-opacity: 0.9;
 		opacity: 0.9;
+	}
+	
+	.projects:hover #web_client_left {
+		filter: alpha(Opacity=0.8);
+		-moz-opacity: 0.8;
+		-khtml-opacity: 0.8;
+		opacity: 0.8;
 	}
 	
 	.panel {
@@ -2677,7 +2684,7 @@
 		font: 14px Arial; /* размер и тип шрифта */
 		color: #fff; /* цвет текста */
 		text-align: center; /* выравнивание текста по центру */
-		background: url(images/row_left.png) no-repeat;
+		
 
 		-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
 		-moz-transition-duration: 0.3s;
@@ -2688,10 +2695,10 @@
 		-moz-border-radius: 0 5px 5px 0;
 		border-radius: 0 5px 5px 0;
 		
-		filter: alpha(Opacity=0.3);
-		-moz-opacity: 0.3;
-		-khtml-opacity: 0.3;
-		opacity: 0.3;
+		filter: alpha(Opacity=0);
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		opacity: 0;
     }
 	
 	.hidden_panel {
@@ -2718,7 +2725,7 @@
 		opacity: 0;
     }
 	.panel:hover {
-		right: 130px;
+		right: 120px;
 		filter: alpha(Opacity=0.8);
 		-moz-opacity: 0.8;
 		-khtml-opacity: 0.8;
@@ -2736,6 +2743,10 @@
 		top:2px;
 		right:2px;
 		background: url(images/reports.jpg) no-repeat;
+	}
+	
+	#web_client_left{
+		background: url(images/row_left.png) no-repeat;
 	}
 	
 	#web_client{
@@ -2773,6 +2784,19 @@
 		right:2px;
 		background: url(images/gis.png) no-repeat;
 	}
+	
+	#pa7{
+		top:396px;
+		right:2px;
+		background: url(images/pa7.png) no-repeat;
+	}
+	
+	#autotest{
+		top:462px;
+		right:2px;
+		background: url(images/autotest_reports.png) no-repeat;
+	}
+	
 	
 	.tool {
 		cursor: help;
@@ -2831,7 +2855,7 @@
 
 	/* Tooltip text */
 	.projects .tooltiptext {
-		top: 13px;
+		top: 32px;
 		right: 105%; 
 		visibility: hidden;
 		width: 120px;
@@ -2840,7 +2864,7 @@
 		text-align: center;
 		padding: 5px 0;
 		border-radius: 6px;
-		opacity: 0.7;
+		opacity: 0.4;
 	 
 		/* Position the tooltip text - see examples below! */
 		position: absolute;
@@ -2850,4 +2874,5 @@
 	/* Show the tooltip text when you mouse over the tooltip container */
 	.projects:hover .tooltiptext {
 		visibility: visible;
+		transition: opacity 3s ease, top 1s ease;
 	}
