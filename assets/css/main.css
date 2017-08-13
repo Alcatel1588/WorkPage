@@ -1390,7 +1390,6 @@
 		color: #35b88f;
 		text-shadow: 0 0 0.5px rgba(53, 184, 143, 0.25);
 		text-decoration: none;
-		border-bottom: dotted 1px rgba(53, 184, 143, 0.5);
 	}
 
 		a:hover {
@@ -2642,162 +2641,6 @@
 		padding: 10px;
     }
 	
-	.projects {
-		position: fixed;
-		left: 0px
-		display:block;
-		text-align: right;
-		float: right;
-		margin-right: 2px;
-		width: 64px;
-		height: 64px;
-		 
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		border-radius: 15px;
-		filter: alpha(Opacity=50);
-		-moz-opacity: 0.5;
-		-khtml-opacity: 0.5;
-		opacity: 0.5;
-	}
-	
-	.projects:hover{
-		filter: alpha(Opacity=90);
-		-khtml-opacity: 0.9;
-		opacity: 0.9;
-	}
-	
-	.projects:hover #web_client_left {
-		filter: alpha(Opacity=0.8);
-		-moz-opacity: 0.8;
-		-khtml-opacity: 0.8;
-		opacity: 0.8;
-	}
-	
-	.panel {
-		position: fixed; /* положение */
-		top: 76px; /* отступ сверху */
-		right: 60px; /* отступ слева */
-		display:block;
-		width: 32px; /* ширина блока */
-		height: 64px; /* высота блока */
-		font: 14px Arial; /* размер и тип шрифта */
-		color: #fff; /* цвет текста */
-		text-align: center; /* выравнивание текста по центру */
-		
-
-		-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
-		-moz-transition-duration: 0.3s;
-		-o-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-
-		-webkit-border-radius: 0 5px 5px 0; /* закругление границ для всех браузеров*/
-		-moz-border-radius: 0 5px 5px 0;
-		border-radius: 0 5px 5px 0;
-		
-		filter: alpha(Opacity=0);
-		-moz-opacity: 0;
-		-khtml-opacity: 0;
-		opacity: 0;
-    }
-	
-	.hidden_panel {
-		position: fixed; /* положение */
-		/*top: 66px;  отступ сверху */
-		color: #000; /* цвет текста */
-		width: 64px; /* ширина блока */
-		height: 64px; /* высота блока */
-		/*padding: 0px;  отступы от границ внутри блока */
-		text-align: left; /* выравнивание текста */
-
-		-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
-		-moz-transition-duration: 0.3s;
-		-o-transition-duration: 0.3s;
-		transition-duration: 0.3s;
-
-		-webkit-border-radius: 0 5px 5px 0; /* закругление границ для всех браузеров*/
-		-moz-border-radius: 0 5px 5px 0;
-		border-radius: 0 5px 5px 0;
-		
-		filter: alpha(Opacity=0);
-		-moz-opacity: 0;
-		-khtml-opacity: 0;
-		opacity: 0;
-    }
-	.panel:hover {
-		right: 120px;
-		filter: alpha(Opacity=0.8);
-		-moz-opacity: 0.8;
-		-khtml-opacity: 0.8;
-		opacity: 0.8;
-	}
-	.panel:hover #web_client {
-		right: 64px;
-		filter: alpha(Opacity=1);
-		-moz-opacity: 1;
-		-khtml-opacity: 1;
-		opacity: 1;
-	}
-	
-	#reports {
-		top:2px;
-		right:2px;
-		background: url(images/reports.jpg) no-repeat;
-	}
-	
-	#web_client_left{
-		background: url(images/row_left.png) no-repeat;
-	}
-	
-	#web_client{
-		top:66px;
-		right:2px;
-		background: url(images/client.png) no-repeat;
-	}
-	
-	#client{
-		top:66px;
-		right:2px;
-		background: url(images/client.png) no-repeat;
-	}
-	
-	#dsview{
-		top:130px;
-		right:2px;
-		background: url(images/dsview.png) no-repeat;
-	}
-	
-	#textmining{
-		top:196px;
-		right:2px;
-		background: url(images/text_mining.png) no-repeat;
-	}
-	
-	#bugzilla{
-		top:264px;
-		right:2px;
-		background: url(images/bugzilla.png) no-repeat;
-	}
-	
-	#gis{
-		top:330px;
-		right:2px;
-		background: url(images/gis.png) no-repeat;
-	}
-	
-	#pa7{
-		top:396px;
-		right:2px;
-		background: url(images/pa7.png) no-repeat;
-	}
-	
-	#autotest{
-		top:462px;
-		right:2px;
-		background: url(images/autotest_reports.png) no-repeat;
-	}
-	
-	
 	.tool {
 		cursor: help;
 		position: relative;
@@ -2846,6 +2689,7 @@
 		transition: opacity 0.6s ease;
 	}
 	
+	/* заповедник черного тултипа */
 	/* Tooltip container */
 	.tooltip {
 		position: relative;
@@ -2876,3 +2720,313 @@
 		visibility: visible;
 		transition: opacity 3s ease, top 1s ease;
 	}
+	
+	.vertical_panel{
+		position: fixed;
+		top: 2px;
+		right: 2px;
+		width: 90px;
+		height: 591px;
+		display: block;
+	}
+	
+		.vertical_panel .panel_color{
+			position: relative;
+			width: 94px;
+			height: 591px;
+			background: #8a7c58; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
+			opacity: 0.3;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+	
+		.vertical_panel .project_box{
+			position: relative;
+			top: -591px;
+			left: 0px;
+			margin-left: 2px;
+			margin-bottom: 0px;
+			margin-right: 2px;
+			margin-top: 2px;
+			border: 1px;
+			border-color: #3a4459;
+			padding: 2px;
+			width: 86px;
+			height: 71px;
+			filter: alpha(Opacity=90);
+			-moz-opacity: 0.9;
+			-khtml-opacity: 0.9;
+			-webkit-border-radius: 15px;
+			-moz-border-radius: 15px;
+			border-radius: 15px;
+		}
+	
+			.project_box .box_color{
+				position: relative;
+				width: 86px;
+				height: 71px;
+				background: #54573e; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
+				opacity: 0.3;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+			}
+	
+			.project_box  .icon_box {
+				top: 0px;
+				left: 0px;
+				width: 64px;
+				height: 64px;
+				margin-top:-61px;
+				margin-left:18px;
+				opacity: 0.5;
+			}
+			
+			.project_box  .left_box {
+				top: 0px;
+				left: 0px;
+				width: 16px;
+				height: 64px;
+				margin-top:-94px;
+				margin-left:2px;
+				opacity: 0.3;
+				-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+				-moz-transition-duration: 0.3s;
+				-o-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				/*border: 1px solid #54573e;*/
+			}
+			
+				.left_box .hide_color{
+					top: 0px;
+					left: 0px;
+					width: 16px;
+					height: 70px;
+					margin-top:24px;
+					margin-left:0px;
+					background: #54573e;
+					-webkit-border-radius: 5px;
+					-moz-border-radius: 5px;
+					border-radius: 5px;
+					opacity: 0.3;
+					visibility: hidden;
+				}
+			
+				.left_box .hide_box{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					margin-top:-46px;
+					margin-left:16px;
+					opacity: 0.9;
+					visibility: hidden;
+				}
+				
+					.hide_box .hide_icon{
+						top: 0px;
+						left: 0px;
+						margin-top:0px;
+						margin-left:0px;
+						width: 64px;
+						height: 64px;
+						-webkit-border-radius: 15px;
+						-moz-border-radius: 15px;
+						border-radius: 15px;
+					}
+	
+				.left_box  .left_button {
+					top: 0px;
+					left: 0px;
+					width: 13px;
+					height: 25px;
+					margin-top:-46px;
+					margin-left:1px;
+					background: url(images/left.png) no-repeat;
+					-webkit-border-radius: 3px;
+					-moz-border-radius: 3px;
+					border-radius: 3px;
+					opacity: 0.9;
+				}
+			
+			.project_box:hover .box_color{
+				opacity: 0.5;
+			}
+			
+			.project_box:hover .icon_box{
+				opacity: 0.9;
+			}
+			
+			#lb_client:hover .left_button{
+				opacity: 0.9;
+			}
+			
+			#lb_client:hover .hide_box{
+				visibility: visible;
+			}
+			
+			#lb_client:hover .hide_color{
+				width: 215px;
+				visibility: visible;
+				opacity: 0.3;
+			}
+			
+			#lb_client:hover{
+				width: 84px;
+				margin-left:-66px;
+				border-color: #3a4459;
+				opacity: 0.9;
+			}
+			
+			#lb_bugzulla:hover .left_button{
+				opacity: 0.9;
+			}
+			
+			#lb_bugzulla:hover .hide_box{
+				visibility: visible;
+			}
+			
+			#lb_bugzulla:hover .hide_color{
+				width: 215px;
+				visibility: visible;
+				opacity: 0.3;
+			}
+			
+			#lb_bugzulla:hover{
+				width: 84px;
+				margin-left:-66px;
+				border-color: #3a4459;
+				opacity: 0.9;
+			}
+			
+			#lb_autotest:hover .left_button{
+				opacity: 0.9;
+			}
+			
+			#lb_autotest:hover .hide_box{
+				visibility: visible;
+			}
+			
+			#lb_autotest:hover .hide_color{
+				width: 215px;
+				visibility: visible;
+				opacity: 0.3;
+			}
+			
+			#lb_autotest:hover{
+				width: 148px;
+				margin-left:-130px;
+				border-color: #3a4459;
+				opacity: 0.9;
+			}
+			
+			#lb_pa7:hover .left_button{
+				opacity: 0.9;
+			}
+			
+			#lb_pa7:hover .hide_box{
+				visibility: visible;
+			}
+			
+			#lb_pa7:hover .hide_color{
+				width: 215px;
+				visibility: visible;
+				opacity: 0.3;
+			}
+			
+			#lb_pa7:hover{
+				width: 148px;
+				margin-left:-130px;
+				border-color: #3a4459;
+				opacity: 0.9;
+			}
+				.icon_box #reports_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/reports.jpg) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #client_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/client.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #dsview_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/dsview.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #textmining_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/textmining.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #bugzilla_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/bugzilla.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #gis_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/gis.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #pa7_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/pa7.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+				.icon_box #autotest_icon{
+					top: 0px;
+					left: 0px;
+					width: 64px;
+					height: 64px;
+					background: url(images/autotest.png) no-repeat;
+					-webkit-border-radius: 15px;
+					-moz-border-radius: 15px;
+					border-radius: 15px;
+				}
+				
+			

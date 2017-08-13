@@ -15,8 +15,6 @@
 		<script type="text/javascript" src="assets/js/script.js"></script>
 	</head>
 	<body id="top">
-		
-		
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -79,49 +77,125 @@
 		<!-- Banner -->
 			<section id="banner">
 				<header>
-					<h2><a href="http://localhost:5080/polyanalyst/help/rus/toc.html"target="_blank">Table of Contents</a></h2>
+					<h2><a href="http://localhost:5080/polyanalyst/help/rus/toc.html"target="_blank">Table of Contents</a>
+					
+					</h2>
 				</header>
 				
-				<div class="projects" id="reports">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/4/" target="_blank"></a>
-					<span class="tooltiptext">Web Reports</span>
-				</div>
-				<div class="panel"> 
-					<div id="web_client_left">
+				<div class="vertical_panel">
+					<div class="panel_color">
 						
 					</div>
-					<div class="hidden_panel" id="web_client">
-						<a style="height:100%; display:block;" href="https://localhost:5043/polyanalyst/static/paclient/pa6client.html?locale=eng" target="_blank"></a>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+						</div>
+						<div class="icon_box" title="Web Reports">
+							<div id="reports_icon"><a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/4/" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color" id="bc_client"></div>
+						<div class="left_box" id="lb_client">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+							<div class="hide_box">
+								<div class="hide_icon" style="background: url(assets/css/images/client_open.png) no-repeat;" title="Open">
+									<a style="height:100%; display:block;" href="https://localhost:5043/polyanalyst/static/paclient/pa6client.html?locale=eng"target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="icon_box" title="Web Client">
+							<div id="client_icon">
+								<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/20/" target="_blank"></a>
+							</div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+						</div>
+						<div class="icon_box" title="Dataset View">
+							<div id="dsview_icon"><a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/22/" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+						</div>
+						<div class="icon_box" title="Text Mining">
+							<div id="textmining_icon"><a style="height:100%; display:block;" href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PA6" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box" id="lb_bugzulla">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+							<div class="hide_box">
+								<div class="hide_icon" style="background: url(assets/css/images/search.png) no-repeat" title="Search">
+									<a style="height:100%; display:block;" href="https://bugtrack.megaputer.ru/query.cgi?format=advanced"target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="icon_box" title="Bugzilla">
+							<div id="bugzilla_icon"><a style="height:100%; display:block;" href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PA6" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+						</div>
+						<div class="icon_box" title="GIS">
+							<div id="gis_icon"><a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/23/" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box" id="lb_pa7">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+							<div class="hide_box">
+								<div class="hide_icon" style="background: url(assets/css/images/pa7_open.png) no-repeat" title="Открыть PA7">
+									<a style="height:100%; display:block;" href="http://localhost:9980/v0.7/static/www/paclient/pa7app.html"target="_blank"></a>
+								</div>
+								<div class="hide_icon" style="background: url(assets/css/images/pa7_debug.png) no-repeat; margin-left:64px; margin-top:-62px;" title="Debug">
+									<a style="height:100%; display:block;" href="http://localhost:9980/v0.7/static/www/paclient/pa7app.html?debug"target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="icon_box" title="PolyAnalyst 7">
+							<div id="pa7_icon"><a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/31/" target="_blank"></a></div>
+						</div>
+					</div>
+					<div class="project_box">
+						<div class="box_color"></div>
+						<div class="left_box" id="lb_autotest">
+							<div class="hide_color"></div>
+							<div class="left_button"></div>
+							<div class="hide_box">
+								<div class="hide_icon" style="background: url(assets/css/images/add.png) no-repeat;" title="Добавить тест-юнит">
+									<a style="height:100%; display:block;" href="https://qa.megaputer.ru/test_units"target="_blank"></a>
+								</div>
+								<div class="hide_icon" style="background: url(assets/css/images/cases.png) no-repeat; margin-left:64px; margin-top:-62px;" title="Тест-кейсы">
+									<a style="height:100%; display:block;" href="https://qa.megaputer.ru/test_cases"target="_blank"></a>
+								</div>
+							</div>
+						</div>
+						<div class="icon_box" title="Autotest Reports">
+							<div id="autotest_icon"><a style="height:100%; display:block;" href="https://qa.megaputer.ru/reports" target="_blank"></a></div>
+						</div>
 					</div>
 				</div>
-				<div class="projects" id="client">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/20/" target="_blank"></a>
-					<span class="tooltiptext">Web Client</span>
-				</div>
-				<div class="projects" id="dsview">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/22/" target="_blank"></a>
-					<span class="tooltiptext">DSView</span>
-				</div>
-				<div class="projects" id="textmining">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/32/" target="_blank"></a>
-					<span class="tooltiptext">Text Mining</span>
-				</div>
-				<div class="projects" id="bugzilla">
-					<a style="height:100%; display:block;" href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PA6" target="_blank"></a>
-					<span class="tooltiptext">Завести в PA6</span>
-				</div>
-				<div class="projects" id="gis">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/23/" target="_blank"></a>
-					<span class="tooltiptext">GIS</span>
-				</div>
-				<div class="projects" id="pa7">
-					<a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/31/" target="_blank"></a>
-					<span class="tooltiptext">PA7</span>
-				</div>
-				<div class="projects" id="autotest">
-					<a style="height:100%; display:block;" href="https://qa.megaputer.ru/reports" target="_blank"></a>
-					<span class="tooltiptext">Autotest reports</span>
-				</div>
+				
 				
 				<p>Список сотрудников <a href="https://mis.megaputer.ru/employees"target="_blank"><span class="tool" data-tool="Список сотрудников" tabindex="1">Megaputer Intelligent Staff (MIS)</span></a>.<br />
 				</p>
