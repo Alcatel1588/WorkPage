@@ -2623,8 +2623,10 @@
 	}
 	
 	#bug-animal img{
-		width: 150px;
-		height: 100px;
+		top: 0px;
+		left: 0px;
+		width: 60%;
+		height:60%;
 		display: block;
 	}
 	
@@ -2957,12 +2959,27 @@
 			}
 			
 			.btn-clipboard{
-				background: #8a7c58;
-				opacity: 0.3;
+				background: #FFFFFF;
+				opacity: 0.9;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				padding: 4px;
+				text-align: center;
+				color: #000000;
+				font-size: 16px;
+				/*-webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);
+				box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.2);*/
+
+			}
+			#button_text{
+				vertical-align: middle;
 			}
 			
 			.btn-clipboard:hover{
-				opacity: 0.9;
+				opacity: 1;
+				background: #578eba;
 			}
 			
 			.updown_box:hover{

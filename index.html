@@ -269,20 +269,27 @@
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/gif/chatnoir-plugg-marinette-ladybug-Favim.com-4301534.gif" alt="" /></a>
+				<a href="#" class="image fit" style="height:100%; display:block;"></a>
 				<div class="inner">
 					<header>
 						<h2>Server settings</h2>
 					</header>
 					<p id="bug-animal">
-						<img src="images/gif/Tined.gif" alt="" />
+						<img src="images/gif/HP/snitch_header.png" alt="" />
 					</p>
-					<p><b>\\host\dlc</b> - DLC update<br />
-					<b>\\host\paupdate\main</b> - PA update<br />
-					<button class="btn-clipboard" data-clipboard-target="#copy1">
-					   Copy
+					<button class="btn-clipboard" data-clipboard-target="#DLC_update">
+						<img src="assets/css/images/copy.png" alt="Copy"</>
+						<span id="DLC_update"><b>\\host\dlc</b></span> - PA update.
+					</button><br />
+					<button class="btn-clipboard" data-clipboard-target="#PA_update">
+						<img src="assets/css/images/copy.png" alt="Copy"</>
+						<span id="PA_update"><b>\\host\paupdate\main</b></span> - PA update.
+					</button><br />
+					<button class="btn-clipboard" data-clipboard-target="#res_api_hadoop">
+						<img src="assets/css/images/copy.png" alt="Copy"</>
+						<span id="res_api_hadoop"><b>http://192.168.1.71:15508</b></span> - res api hadoop.
 					</button>
-					<span id="copy1"><b>http://192.168.1.71:15508</b></span> - res api hadoop.</p>
+					</p>
 					
 				</div>
 			</article>
@@ -304,14 +311,11 @@
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
-				<a href="#" class="image fit"><img src="images/gif/chatnoir-plugg-marinette-ladybug-Favim.com-4301534.gif" alt="" /></a>
+				<a href="#" class="image fit" style="height:100%; display:block;"></a>
 				<div class="inner">
 					<header>
 						<h2>Hdfs</h2>
 					</header>
-					<p id="bug-animal">
-						<img src="images/gif/Tined.gif" alt="" />
-					</p>
 					<p>копирование файла на 71: scp <path to file> hadoop@10.0.0.71:/home/hadoop/data<br/>
 					<p>заходим на 71 по ssh: ssh hadoop@192.168.1.71</p>
 					<p>выполняем команду:  hdfs dfs -put data/<file> /user/hadoop/data</p>
