@@ -13,6 +13,7 @@
 		<link rel="shortcut icon" href="images//16x16//favicon16x16.png" type="image/x-icon">
 		<script type="text/javascript" src="assets/js/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="assets/js/script.js"></script>
+		<script src="assets/js/clipboard.min.js"></script>
 	</head>
 	<body id="top">
 		<!-- Header -->
@@ -130,7 +131,7 @@
 							<div class="left_button"></div>
 						</div>
 						<div class="icon_box" title="Text Mining">
-							<div id="textmining_icon"><a style="height:100%; display:block;" href="https://bugtrack.megaputer.ru/enter_bug.cgi?product=PA6" target="_blank"></a></div>
+							<div id="textmining_icon"><a style="height:100%; display:block;" href="https://phabricator.megaputer.ru/project/view/32/" target="_blank"></a></div>
 						</div>
 					</div>
 					<div class="project_box">
@@ -194,6 +195,8 @@
 							<div id="autotest_icon"><a style="height:100%; display:block;" href="https://qa.megaputer.ru/reports" target="_blank"></a></div>
 						</div>
 					</div>
+					<div class="updown_box" id="up"></div>
+					<div class="updown_box" id="down"></div>
 				</div>
 				
 				
@@ -242,7 +245,8 @@
 				</p>
 				<p>ПА6 <a href="https://localhost:5043/polyanalyst/static/paclient/pa6client.html?locale=eng"target="_blank">Pallet</a>.<br />
 				</p>
-				
+				<p>ПА6 <a href="http://localhost:5080/polyanalyst/help/eng/toc.html"target="_blank">Help</a>; <a href="http://www.megaputer.com/site/support.php"target="_blank">Support(site)</a>.<br />
+				</p>
 				
 				<!--<div class="fixed_button">button</div>1 -->
 				<footer>
@@ -275,7 +279,11 @@
 					</p>
 					<p><b>\\host\dlc</b> - DLC update<br />
 					<b>\\host\paupdate\main</b> - PA update<br />
-					<b>http://192.168.1.71:15508</b> - res api hadoop.</p>
+					<button class="btn-clipboard" data-clipboard-target="#copy1">
+					   Copy
+					</button>
+					<span id="copy1"><b>http://192.168.1.71:15508</b></span> - res api hadoop.</p>
+					
 				</div>
 			</article>
 			

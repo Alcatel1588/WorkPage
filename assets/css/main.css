@@ -2726,14 +2726,14 @@
 		top: 2px;
 		right: 2px;
 		width: 90px;
-		height: 591px;
+		height: 611px;
 		display: block;
 	}
 	
 		.vertical_panel .panel_color{
 			position: relative;
 			width: 94px;
-			height: 591px;
+			height: 611px;
 			background: #8a7c58; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
 			opacity: 0.3;
 			-webkit-border-radius: 5px;
@@ -2743,7 +2743,7 @@
 	
 		.vertical_panel .project_box{
 			position: relative;
-			top: -591px;
+			top: -611px;
 			left: 0px;
 			margin-left: 2px;
 			margin-bottom: 0px;
@@ -2760,6 +2760,20 @@
 			-webkit-border-radius: 15px;
 			-moz-border-radius: 15px;
 			border-radius: 15px;
+		}
+		
+		.vertical_panel .updown_box{
+			position: relative;
+			margin-top:-611px;
+			width: 40px;
+			height: 18px;
+			filter: alpha(Opacity=40);
+			-moz-opacity: 0.4;
+			-khtml-opacity: 0.4;
+			opacity: 0.4;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
 		}
 	
 			.project_box .box_color{
@@ -2941,6 +2955,33 @@
 				border-color: #3a4459;
 				opacity: 0.9;
 			}
+			
+			.btn-clipboard{
+				background: #8a7c58;
+				opacity: 0.3;
+			}
+			
+			.btn-clipboard:hover{
+				opacity: 0.9;
+			}
+			
+			.updown_box:hover{
+				opacity: 0.9;
+			}
+			
+				#up{
+					top: 5px;
+					left: 0px;
+					margin-left:7px;
+					background: url(images/up_.png) no-repeat;
+				}
+				
+				#down{
+					top: 598px;
+					left: 0px;
+					margin-left:49px;
+					background: url(images/down_.png) no-repeat;
+				}
 				.icon_box #reports_icon{
 					top: 0px;
 					left: 0px;

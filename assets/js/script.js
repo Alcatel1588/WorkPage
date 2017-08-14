@@ -3,6 +3,7 @@ $(document).ready(function(){
 			// hide #back-top first
 			$("#back-top").hide();
 			$("#back-hadoop").hide();
+			new Clipboard('.btn-clipboard');
 			
 			// fade in #back-top
 			$(function () {
@@ -34,13 +35,13 @@ $(document).ready(function(){
 					$('body,html').animate({
 						scrollTop: 2700
 						}, 800);
-				return false;
+					return false;
 				});
 				$('#hadoop_p span').click(function () {
 					$('body,html').animate({
 						scrollTop: 2700
 						}, 800);
-				return false;
+					return false;
 				});
 				
 			});
