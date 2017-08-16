@@ -1,9 +1,16 @@
 
 $(document).ready(function(){
 			// hide #back-top first
+			PopUpHide();
 			$("#back-top").hide();
 			$("#back-hadoop").hide();
 			new Clipboard('.btn-clipboard');
+			
+			var div = document.createElement('div');
+			div.className = "alert alert-success";
+			div.innerHTML = "Winter is coming ... ";
+
+			document.body.appendChild(div);
 			
 			// fade in #back-top
 			$(function () {
@@ -45,5 +52,14 @@ $(document).ready(function(){
 				});
 				
 			});
+			
 		});
 				
+			//Функция отображения PopUp
+			function PopUpShow(){
+				$("#popup1").show();
+			}
+			//Функция скрытия PopUp
+			function PopUpHide(){
+				$("#popup1").hide();
+			}
