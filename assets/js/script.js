@@ -8,7 +8,7 @@ $(document).ready(function(){
 			
 			var div = document.createElement('div');
 			div.className = "alert alert-success";
-			div.innerHTML = "Winter is coming ... ";
+			div.innerHTML = "<a href=\"http://localhost:5080/polyanalyst/help/eng/toc.html\" target=\"_blank\">Winter is coming ... </a>";
 
 			document.body.appendChild(div);
 			

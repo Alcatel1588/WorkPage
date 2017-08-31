@@ -116,7 +116,7 @@
 				</p>
 				<p>Фабрикатор <a href="https://phabricator.megaputer.ru/project/view/4/"target="_blank">PA6 Web Reports</a>; <a href="https://phabricator.megaputer.ru/project/view/20/"target="_blank">web client</a>; <a href="https://phabricator.megaputer.ru/project/view/22/"target="_blank">DSView</a>; <a href="https://phabricator.megaputer.ru/project/view/32/"target="_blank">Text Mining</a>.<br />
 				</p>
-				<p>Фабрикатор <a href="https://phabricator.megaputer.ru/project/view/15/"target="_blank">PA7 Web UI</a>; <a href="https://phabricator.megaputer.ru/project/view/31/"target="_blank">PA7</a>; <a href="https://phabricator.megaputer.ru/project/view/16/"target="_blank">Hadoop</a>; <a href="https://phabricator.megaputer.ru/project/view/37/"target="_blank">Testing</a>; <a href="https://phabricator.megaputer.ru/project/view/23/"target="_blank">GIS</a>.<br />
+				<p>Фабрикатор <a href="https://phabricator.megaputer.ru/project/view/15/"target="_blank">PA7 Web UI</a>; <a href="https://phabricator.megaputer.ru/project/view/31/"target="_blank">PA7</a>; <a href="https://phabricator.megaputer.ru/project/view/16/"target="_blank">Hadoop</a>; <a href="https://phabricator.megaputer.ru/project/view/37/"target="_blank">Testing</a>; <a href="https://phabricator.megaputer.ru/project/view/23/"target="_blank">GIS</a>; <a href="https://phabricator.megaputer.ru/project/board/46/"target="_blank">Graph</a>.<br />
 				</p>
 				<p>Ревизии <a href="https://jenkins.megaputer.ru/job/pa6distr_tests/"target="_blank">Workboard</a>.<br />
 				</p>
@@ -155,11 +155,12 @@
 
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
-				<a href="#" class="image fit" style="height:100%; display:block;"></a>
+				<a href="javascript:PopUpShow()" class="image fit" style="height:100%; display:block;"></a>
 				<div class="inner">
 					<header>
 						<h2>Server settings</h2>
 					</header>
+					
 					<p id="bug-animal">
 						<img src="images/gif/HP/snitch_header.png" alt="" />
 					</p>
@@ -196,7 +197,7 @@
 						<img src="assets/css/images/copy.png" alt="Copy"</>
 						<span id="Build_update">\\host\paupdate\main</span> - Build update.
 					</button></br>
-					<button class="btn-clipboard" data-clipboard-target="#Build_update">
+					<button class="btn-clipboard" data-clipboard-target="#FTP_path">
 						<img src="assets/css/images/copy.png" alt="Copy"</>
 						<span id="FTP_path">ftp://mega@ftp.megaputer.net/lengesov/</span> - FTP.
 					</button>
@@ -214,8 +215,12 @@
 						<img src="assets/css/images/copy.png" alt="Copy"</>
 						<span id="ssh_command">ssh hadoop@192.168.1.71</span> - заходим на 71.
 					</button></br>
-					<p>копирование файла на 71: scp <path to file> hadoop@10.0.0.71:/home/hadoop/data<br/>
+					<button class="btn-clipboard" data-clipboard-target="#bash_debug">
+						<img src="assets/css/images/copy.png" alt="Copy"</>
+						<span id="bash_debug">bash HadoopEngine.sh debug</span> - пуск сервера.
+					</button></br>
 					<p>выполняем команду:  hdfs dfs -put data/<file> /user/hadoop/data</p>
+					<a href="javascript:PopUpShow()">read</a>
 				</div>
 			</article>
 			
@@ -580,14 +585,39 @@
 					<div class="updown_box" id="up"></div>
 					<div class="updown_box" id="down"></div>
 				</div>
-				<div class="b-container">
-					Sample Text
-					<a href="javascript:PopUpShow()">Show popup</a>
-				</div>
 				<div class="b-popup" id="popup1">
 					<div class="b-popup-content">
-						Text in Popup
-						<a href="javascript:PopUpHide()">Hide popup</a>
+						<div class="close_button">
+							<a style="height:100%; display:block;" href="javascript:PopUpHide()"></a>
+						</div>
+						<p>
+							/user/hadoop/data/CrimeData.csv
+вот так заливаются файлы на кластер (login/pwd от 71: hadoop/hadoop):
+1. копируем файл на 71: scp <path to file> hadoop@10.0.0.71:/home/hadoop/data
+2. заходим на 71 по ssh: ssh hadoop@192.168.1.71
+3. выполняем команду:  hdfs dfs -put data/<file> /user/hadoop/data
+
+bash HadoopEngine.sh debug
+
+Нужно узнать id процесса, который слушает порт: netstat -tulpn | grep <port>
+потом можно убить этот процесс kill -9 <process id>
+
+логинишься в керберос kinit hadoop@MEGAPUTER  -k -t /home/hadoop/hadoop.keytab затем удаляешь hdfs dfs -rm -r твой путь
+
+Список Hadoop SRL функций находится в файле: "PAUIObjects/StyledTextCtrl/template_hadoop-srl.xml"
+Bin64/template_hadoop-srl.xml
+
+C:\bin\R\bin\x64
+ln -s ~/hadoop_out/alengesov_beta servers/alengesov_beta/data_out
+data_out/ololo.csv
+HadoopEngine.*
+
+надо всем в папках ваших хадуповских серверов выполнить команду
+ln -s ~/servers/databases.txt databases.txt
+
+это надо, чтоб у вас в хадуповских одбц узлах появились DSNы
+я на этой неделе добавлю автотестовые проекты для одбц.
+						</p>
 					</div>
 				</div>
 	</body>
