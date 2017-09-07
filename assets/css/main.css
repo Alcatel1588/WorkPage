@@ -2637,7 +2637,7 @@
 	}
 	
 	#snitch {
-		position: absolute;
+		position: fixed;
 		top: 4px;
 		left: 4px;
 		padding: 10px;
@@ -2762,6 +2762,7 @@
 			-webkit-border-radius: 15px;
 			-moz-border-radius: 15px;
 			border-radius: 15px;
+			cursor: move;
 		}
 		
 		.vertical_panel .updown_box{
@@ -3116,6 +3117,7 @@
 	}
 	
 	.close_button{
+		position: fixed;
 		display: block;
 		top: 0px;
 		margin-right: 0px;
