@@ -23,7 +23,32 @@ $(document).ready(function(){
 				  if (browser.indexOf("Firefox") != -1) ff = 1;
 				}
 			  }
-			var block = document.getElementById("snitch");
+			var pr_client_left = document.getElementById("bt_client_left");
+			pr_client_left.onmouseenter = function() { // курсор зашёл на элемент-родитель [mozilla.org]
+    			var find_div = document.getElementById("bt_client");
+    			find_div.style.width = 166+"px";
+    			find_div.style.right = 70+"px";
+    			this.style.width = 84+"px";
+    			var div_ico = document.createElement('div');
+    			div_ico.setAttribute("class","hide_ico");
+    			div_ico.setAttribute("id","client_hide_ico");
+    			div_ico.style.top = 2+"px";
+    			div_ico.style.left = 27+"px";
+    			div_ico.setAttribute("style","background: url(assets/css/images/client_open.png) no-repeat; margin-top: -44px; margin-left: 20px;");
+    			div_ico.setAttribute("title","Open");
+    			div_ico.innerHTML = "<a style=\"height:100%; width:100%; display:inline-block;\" href=\"https://localhost:5043/polyanalyst/static/paclient/pa6client.html?locale=eng\"target=\"_blank\"></a>";
+    			this.appendChild(div_ico);
+  			}
+  			pr_client_left.onmouseleave = function() { // курсор зашёл на элемент-родитель [mozilla.org]
+    			var find_div = document.getElementById("bt_client");
+    			find_div.style.width = 96+"px";
+    			find_div.style.right = 0+"px";
+    			this.style.width = 20+"px";
+    			find_div = document.getElementById("client_hide_ico");
+    			find_div.parentNode.removeChild(find_div);
+  			}
+			var block = document.getElementById("menu_panel_move");
+			var main_block = document.getElementById("menu_panel");
 			delta_x = 0;
 			delta_y = 0;
 			  /* Ставим обработчики событий на нажатие и отпускание клавиши мыши */
@@ -52,8 +77,8 @@ $(document).ready(function(){
 		  }
 		}
 		/* Узнаём текущие координаты блока */
-		x_block = block.offsetLeft;
-		y_block = block.offsetTop;
+		x_block = main_block.offsetLeft;
+		y_block = main_block.offsetTop;
 		/* Узнаём смещение */
 		delta_x = x_block - x;
 		delta_y = y_block - y;
@@ -82,8 +107,8 @@ $(document).ready(function(){
 		/* Вычисляем новые координаты блока */
 		new_x = delta_x + x;
 		new_y = delta_y + y;
-		block.style.top = new_y + "px";
-		block.style.left = new_x + "px";
+		main_block.style.top = new_y + "px";
+		main_block.style.left = new_x + "px";
 	  }
 			//==
 			// fade in #back-top

@@ -2637,7 +2637,7 @@
 	}
 	
 	#snitch {
-		position: fixed;
+		position: relative;
 		top: 4px;
 		left: 4px;
 		padding: 10px;
@@ -2722,7 +2722,7 @@
 		visibility: visible;
 		transition: opacity 3s ease, top 1s ease;
 	}
-	
+	/* Старая версия панели */
 	.vertical_panel{
 		position: fixed;
 		top: 2px;
@@ -3126,4 +3126,209 @@
 		height: 20px;
 		background: url(images/close.png) no-repeat;
 	}
-	
+	/* Конец описания старой версии панели  */
+	.oioi{
+		position: fixed;
+		top: 2px;
+		right: 400px;
+		width: 50px;
+		height: 50px;
+		background: #9ab51f;
+		border: 4px solid #493a4d;
+		padding: 2px;
+	}
+
+	.button_box{
+		position: fixed;
+		top: 2px;
+		right: 200px;
+		width: 96px;
+		height: 637px;
+		display: block;
+		background: #cab116;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+		.button_box .move_box{
+			position: relative;
+			top: 0px;
+			width: 96px;
+			height: 24px;
+			cursor: move;
+		}
+		.button_box .font_box{
+			position: relative;
+			top: 0px;
+			width: 96px;
+			height: 606px;
+			background: #493a4d; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+			.font_box .prj_box{
+				position: relative;
+				top: 0px;
+				right: 0px;
+				margin-left: 0px;
+				margin-bottom: 0px;
+				margin-right: 0px;
+				margin-top: 0px;
+				border: 2px solid #493a4d;
+				width: 96px;
+				height: 72px;
+				filter: alpha(Opacity=90);
+				-moz-opacity: 0.9;
+				-khtml-opacity: 0.9;
+				-webkit-border-radius: 10px;
+				-moz-border-radius: 10px;
+				border-radius: 10px;
+				cursor: move;
+				background: #9ab51f;
+				-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
+				-moz-transition-duration: 0.3s;
+				-o-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+			}
+				.prj_box:hover{
+					background: #2ab411;
+				}
+
+			.font_box .updn_box{
+				position: relative;
+				margin-top: 4px;
+				margin-left: 0px;
+				width: 45px;
+				height: 24px;
+				border: 1px solid #493a4d;
+				filter: alpha(Opacity=40);
+				-moz-opacity: 0.4;
+				-khtml-opacity: 0.4;
+				-webkit-border-radius: 5px;
+				-moz-border-radius: 5px;
+				border-radius: 5px;
+				background: #9ab51f;
+				display: inline-block;
+			}
+				.updn_box:hover{
+					background: #2ab411;
+				}
+				.prj_box .left_container{
+					position: relative;
+					top:  0px;
+					left: 0px;
+					width: 22px;
+					height: 66px;
+					display: inline-block;
+				}
+				.prj_box .right_container{
+					position: relative;
+					top:  0px;
+					left: 0px;
+					float: right;
+					width: 64px;
+					height: 64px;
+					display: inline-block;
+				}
+					.left_container .left_bt{
+						position: relative;
+						top:  2px;
+						left: 2px;
+						width: 20px;
+						height: 64px;
+						/*background: #92c5ff;*/
+						display: inline-block;
+					}
+					.right_container .icon_bt{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						margin-top: 2px;
+						margin-left: -2px;
+						/*background: #92c5ff;
+						position: relative;
+						display: block;*/
+					}
+				.prj_box .down_link{
+					position: relative;
+					top: 0px;
+					margin-top: -10px;
+					margin-left: -50px;
+					width: 44px;
+					height: 32px;
+					/*background: #92c5ff;*/
+					display: inline-block;
+					background: url(images/down_.png) no-repeat;
+					opacity: 0;
+				}
+					.down_link:hover{
+						opacity: 0.8;
+					}
+					.icon_bt #reports_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/reports.jpg) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #client_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/client.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #report_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/reports.jpg) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.left_bt .left_icon{
+						top: 0px;
+						left: 0px;
+						width: 13px;
+						height: 25px;
+						margin-top: 20px;
+						margin-left: 2px;
+						background: url(images/left.png) no-repeat;
+						-webkit-border-radius: 3px;
+						-moz-border-radius: 3px;
+						border-radius: 3px;
+						opacity: 0.9;
+						/*display: inline-block;*/
+					}
+					.left_bt .hide_ico{
+						top: 0px;
+						left: 0px;
+						margin-top:0px;
+						margin-left:0px;
+						width: 64px;
+						height: 64px;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+						display: inline-block;
+					}
+					.left_bt:hover #client_hide_ico{
+						visibility: visible;
+					}
+
+					#client_hide_ico{
+						background: url(images/client_open.png) no-repeat; 
+						margin-top: -44px; 
+						margin-left: 20px;
+						visibility: hidden;
+					}
