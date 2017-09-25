@@ -3145,7 +3145,7 @@
 		width: 96px;
 		height: 637px;
 		display: block;
-		background: #cab116;
+		background: #238076;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
@@ -3162,7 +3162,7 @@
 			top: 0px;
 			width: 96px;
 			height: 606px;
-			background: #493a4d; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
+			background: #026F64; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
 			-webkit-border-radius: 5px;
 			-moz-border-radius: 5px;
 			border-radius: 5px;
@@ -3185,14 +3185,20 @@
 				-moz-border-radius: 10px;
 				border-radius: 10px;
 				cursor: move;
-				background: #9ab51f;
+				background: #05AB99;
 				-webkit-transition-duration: 0.3s; /* анимационное выдвижение для всех браузеров*/
 				-moz-transition-duration: 0.3s;
 				-o-transition-duration: 0.3s;
 				transition-duration: 0.3s;
 			}
 				.prj_box:hover{
-					background: #2ab411;
+					background: #3AD5C5;
+				}
+				.prj_box:hover .right_container{
+					filter: alpha(Opacity=100);
+					-moz-opacity: 1;
+					-khtml-opacity: 1;
+					opacity: 1;
 				}
 
 			.font_box .updn_box{
@@ -3208,11 +3214,11 @@
 				-webkit-border-radius: 5px;
 				-moz-border-radius: 5px;
 				border-radius: 5px;
-				background: #9ab51f;
+				background: #05AB99;
 				display: inline-block;
 			}
 				.updn_box:hover{
-					background: #2ab411;
+					background: #3AD5C5;
 				}
 				.prj_box .left_container{
 					position: relative;
@@ -3230,6 +3236,10 @@
 					width: 64px;
 					height: 64px;
 					display: inline-block;
+					filter: alpha(Opacity=70);
+					-moz-opacity: 0.7;
+					-khtml-opacity: 0.7;
+					opacity: 0.7;
 				}
 					.left_container .left_bt{
 						position: relative;
@@ -3292,6 +3302,66 @@
 						width: 64px;
 						height: 64px;
 						background: url(images/reports.jpg) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #dsview_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/dsview.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #textmining_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/textmining.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #bugzilla_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/bugzilla.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #gis_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/gis.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #pa7_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/pa7.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #autotest_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/autotest.png) no-repeat;
 						-webkit-border-radius: 10px;
 						-moz-border-radius: 10px;
 						border-radius: 10px;
