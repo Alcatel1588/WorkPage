@@ -3143,7 +3143,7 @@
 		top: 2px;
 		right: 200px;
 		width: 96px;
-		height: 637px;
+		height: 690px;
 		display: block;
 		background: #238076;
 		-webkit-border-radius: 5px;
@@ -3161,7 +3161,7 @@
 			position: relative;
 			top: 0px;
 			width: 96px;
-			height: 606px;
+			height: 660px;
 			background: #026F64; /*url(images/small.png) repeat, url(images/autotest_reports.png)  */
 			-webkit-border-radius: 5px;
 			-moz-border-radius: 5px;
@@ -3171,13 +3171,13 @@
 				position: relative;
 				top: 0px;
 				right: 0px;
-				margin-left: 0px;
+				margin-left: 2px;
 				margin-bottom: 0px;
 				margin-right: 0px;
-				margin-top: 0px;
-				border: 2px solid #493a4d;
-				width: 96px;
-				height: 72px;
+				margin-top: 1px;
+				/*border: 2px solid #493a4d;*/
+				width: 92px;
+				height: 68px;
 				filter: alpha(Opacity=90);
 				-moz-opacity: 0.9;
 				-khtml-opacity: 0.9;
@@ -3362,6 +3362,16 @@
 						width: 64px;
 						height: 64px;
 						background: url(images/autotest.png) no-repeat;
+						-webkit-border-radius: 10px;
+						-moz-border-radius: 10px;
+						border-radius: 10px;
+					}
+					.icon_bt #graph_icon{
+						top: 0px;
+						left: 0px;
+						width: 64px;
+						height: 64px;
+						background: url(images/graph.png) no-repeat;
 						-webkit-border-radius: 10px;
 						-moz-border-radius: 10px;
 						border-radius: 10px;

@@ -26,9 +26,9 @@ $(document).ready(function(){
 			var pr_client_left = document.getElementById("bt_client_left");
 			pr_client_left.onmouseenter = function() { // курсор зашёл на элемент-родитель [mozilla.org]
     			var find_div = document.getElementById("bt_client");
-    			find_div.style.width = 166+"px";
-    			find_div.style.right = 70+"px";
-    			this.style.width = 84+"px";
+    			find_div.style.width = 164+"px";
+    			find_div.style.right = 72+"px";
+    			this.style.width = 82+"px";
     			var div_ico = document.createElement('div');
     			div_ico.setAttribute("class","hide_ico");
     			div_ico.setAttribute("id","client_hide_ico");
@@ -41,7 +41,7 @@ $(document).ready(function(){
   			}
   			pr_client_left.onmouseleave = function() { // курсор зашёл на элемент-родитель [mozilla.org]
     			var find_div = document.getElementById("bt_client");
-    			find_div.style.width = 96+"px";
+    			find_div.style.width = 92+"px";
     			find_div.style.right = 0+"px";
     			this.style.width = 20+"px";
     			find_div = document.getElementById("client_hide_ico");
